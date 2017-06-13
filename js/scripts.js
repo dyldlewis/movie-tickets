@@ -27,13 +27,47 @@ function Ticket(age, showtime, price) {
 
 //party in the back
 $(document).ready(function() {
-  $("#screen1").submit(function(event) {
+  $("#Harry-Potter").submit(function(event) {
     event.preventDefault();
 
     var showtime = $("#showtimes").val();
     var age = parseInt($("#age").val());
     var price = costCalc(age, showtime);
     var newTicket = new Ticket(age, showtime, price);
-
+    $("#info").show();
+    $(".panel-heading").text("Enjoy the show!");
+    $(".panel-body").empty();
+    $(".panel-body").append("Title: Harry Potter and the Prisoner of Azkaban" +
+    "<br>" + newTicket.showtime + " show" + "<br>" +
+    "Price : $" + newTicket.price + ".00");
   });
+  $("#Remember-The-Titans").submit(function(event) {
+    event.preventDefault();
+
+    var showtime = $("#showtimes").val();
+    var age = parseInt($("#age").val());
+    var price = costCalc(age, showtime);
+    var newTicket = new Ticket(age, showtime, price);
+    $("#info").show();
+    $(".panel-heading").text("Enjoy the show!");
+    $(".panel-body").empty();
+    $(".panel-body").append("Title: Remember The Titans" +
+    "<br>" + newTicket.showtime + " show" + "<br>" +
+    "Price : $" + newTicket.price + ".00");
+  });
+  $("#Ace-Ventura").submit(function(event) {
+    event.preventDefault();
+
+    var showtime = $("#showtimes").val();
+    var age = parseInt($("#age").val());
+    var price = costCalc(age, showtime);
+    var newTicket = new Ticket(age, showtime, price);
+    $("#info").show();
+    $(".panel-heading").text("Enjoy the show!");
+    $(".panel-body").empty();
+    $(".panel-body").append("Title: Ace Ventura: Pet Detective" +
+    "<br>" + newTicket.showtime + " show" + "<br>" +
+    "Price : $" + newTicket.price + ".00");
+  });
+
 });
